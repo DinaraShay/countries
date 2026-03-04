@@ -1,0 +1,244 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img,
+video,
+svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeSpeed;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote::before,
+blockquote::after,
+q::before,
+q::after {
+  content: '';
+  content: none;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+	--colors-white: #fff;
+	--colors-black: #000;
+	--colors-grey-50: #fcfcfc;
+	--colors-blue-900: #2b3844;
+	--colors-blue-950: #202c36;
+	--colors-grey-250: #c4c4c4;
+	--colors-grey-300: #b2b2b2;
+	--colors-grey-350: #979797;
+	--colors-grey-400: #808080;
+	--colors-grey-950: #111517;
+    --colors-shadow: 0 2px 9px 0 rgba(0, 0, 0, 0.05);
+    --border-radius: 5px;
+
+}
+
+[data-theme="light"] {
+  --color-bg:var(--colors-grey-50);
+  --color-bg-light: var(--colors-white);
+  --color-text: var(--color-text);
+}
+
+[data-theme="dark"] {
+  --color-bg:var(--colors-blue-950);
+  --color-bg-light:var(--colors-blue-900);
+  --color-text:var(--colors-white);
+}
+
+body {
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
+    background: var(--color-bg);
+    color: var(--colors-grey-950);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    max-width: 1279px;
+    margin: 0 auto;
+}
+
+header {
+    background: var(--color-bg-light);
+    box-shadow: var(--colors-shadow);
+    padding: 23px 0;
+    color: var(--color-text);
+    transition: background-color 0.3s;
+}
+
+.header__col {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.header__logo {
+    font-weight: 800;
+    font-size: 1.5rem;
+    line-height: 138%;
+    color: var(--color-text);
+}
+
+.header__theme-toggle {
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 200%;
+    color: var(--color-text);
+
+}
+
+.main__form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+    color: var(--color-text);
+}
+
+.main__input {
+    background-color: var(--color-bg-light);
+    box-shadow: var(--colors-shadow);
+    padding: 18px 32px;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+    width: 100%;
+    max-width: 480px;
+    position: relative;
+    padding-left: 50px;
+}
+
+.main__search-wrapper {
+    position: relative;
+}
+
+.main__search-wrapper::before {
+    content: "";
+    background: url('/assets/images/search.svg') no-repeat center;
+    background-size: contain;
+    width: 17px;
+    height: 17px;
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+}
+
+.main__select {
+    background-color: var(--color-bg-light);
+    box-shadow: var(--colors-shadow);
+    padding: 18px 24px;
+    border-radius: var(--border-radius);
+    color: var(--color-text);
+}
+
+.countries__cards {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	margin-top: 48px;
+	gap: 72px;
+}
+
+.countries__card {
+    box-shadow: var(--colors-shadow);
+    background-color: var(--color-bg-light);
+}
+
+.countries_card-content {
+    padding: 22px 91px 48px 24px;
+}
+
+.countries__title {
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 145%;
+	color: var(--color-text);
+}
+
+.countries__info {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 114%;
+	margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.countries__info span {
+	font-weight: 600;
+	font-size: 14px;
+	line-height: 114%;
+}
+
+.countries__info p{
+    color: var(--color-text);
+}
+
+.countries__flag {
+	width: 100%;
+}
